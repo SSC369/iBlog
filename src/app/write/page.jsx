@@ -24,6 +24,7 @@ const WritePage = () => {
   const [open, setOpen] = useState(false);
   const [file, setFile] = useState(null);
   const [media, setMedia] = useState("");
+
   const [desc, setDesc] = useState("");
   const [title, setTitle] = useState("");
 
@@ -77,20 +78,23 @@ const WritePage = () => {
   }
 
   const handleSubmit = async () => {
-    const res = await fetch("/api/posts", {
-      method: "POST",
-      body: JSON.stringify({
-        title,
-        desc,
-        img: media,
-        slug: v4(),
-        // catSlug: "gaming",
-      }),
-    });
+    if (desc && title) {
+      const res = await fetch("/api/posts", {
+        method: "POST",
+        body: JSON.stringify({
+          title,
+          desc,
+          img: media,
+          slug: v4(),
+        }),
+      });
 
-    if (res.status === 200) {
-      const data = await res.json();
-      router.push(`/posts/${data.slug}`);
+      if (res.status === 200) {
+        const data = await res.json();
+        router.push(`/posts/${data.slug}`);
+      }
+    } else {
+      alert("Write blog details !!!");
     }
   };
 
@@ -146,9 +150,11 @@ const WritePage = () => {
         rows={8}
         cols={20}
       />
-      <button className={styles.publish} onClick={handleSubmit}>
-        Publish
-      </button>
+      {desc && title && (
+        <button className={styles.publish} onClick={handleSubmit}>
+          Publish
+        </button>
+      )}
     </div>
   );
 };
