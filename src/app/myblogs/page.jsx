@@ -1,7 +1,6 @@
 "use client";
 
 import styles from "./myBlogs.module.css";
-import Pagination from "@/components/pagination/Pagination";
 import Card from "@/components/card/Card";
 import { TailSpin } from "react-loader-spinner";
 import useSWR from "swr";
@@ -27,10 +26,6 @@ const MyBlogs = (props) => {
     `https://i-blog-ssc369.vercel.app/api/myblogs?page=${page}`,
     fetcher
   );
-
-  const POST_PER_PAGE = 2;
-  const hasPrev = POST_PER_PAGE * (page - 1) > 0;
-  const hasNext = POST_PER_PAGE * (page - 1) + POST_PER_PAGE < data?.count;
 
   const renderPosts = (posts) => {
     return (
@@ -76,7 +71,6 @@ const MyBlogs = (props) => {
         <span style={{ color: "crimson" }}> B</span>logs
       </h1>
       {isLoading ? renderLoading() : renderPosts(data?.posts)}
-      <Pagination page={page} hasPrev={hasPrev} hasNext={hasNext} />
     </div>
   );
 };

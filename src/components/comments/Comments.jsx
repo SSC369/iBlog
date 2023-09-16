@@ -30,7 +30,7 @@ const Comments = ({ postSlug }) => {
     `https://i-blog-ssc369.vercel.app/api/comments?postSlug=${postSlug}`,
     fetcher
   );
-  console.log(data);
+
   const handleSubmit = async () => {
     await fetch("/api/comments", {
       method: "POST",
@@ -46,7 +46,7 @@ const Comments = ({ postSlug }) => {
       <>
         {status === "authenticated" ? (
           <div className={styles.write}>
-            <textarea
+            <input
               onChange={(e) => setDesc(e.target.value)}
               value={desc}
               placeholder="write a comment..."

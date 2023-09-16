@@ -90,7 +90,6 @@ const WritePage = () => {
 
     if (res.status === 200) {
       const data = await res.json();
-      console.log(data);
       router.push(`/posts/${data.slug}`);
     }
   };
@@ -135,7 +134,7 @@ const WritePage = () => {
             src={media}
             alt=""
             width={300}
-            height={200}
+            height={300}
           />
         )}
       </div>

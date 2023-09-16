@@ -79,7 +79,6 @@ const AuthLinks = () => {
               borderBottom: `${path === "/" ? "2px solid crimson" : ""}`,
             }}
             href="/"
-            onClick={() => setOpen(!open)}
           >
             Homepage
           </Link>
@@ -90,7 +89,6 @@ const AuthLinks = () => {
                 borderBottom: `${path === "/login" ? "2px solid crimson" : ""}`,
               }}
               href="/login"
-              onClick={() => setOpen(!open)}
             >
               Login
             </Link>
@@ -103,7 +101,6 @@ const AuthLinks = () => {
                   }`,
                 }}
                 href="/write"
-                onClick={() => setOpen(!open)}
               >
                 Write
               </Link>
@@ -114,7 +111,6 @@ const AuthLinks = () => {
                   }`,
                 }}
                 href="/myblogs"
-                onClick={() => setOpen(!open)}
               >
                 My Blogs
               </Link>

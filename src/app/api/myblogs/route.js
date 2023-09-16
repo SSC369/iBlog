@@ -5,13 +5,8 @@ import { NextResponse } from "next/server";
 export const GET = async (req) => {
   const session = await getAuthSession(); //only works if component is a client component
 
-  const { searchParams } = new URL(req.url);
-  const page = searchParams.get("page");
-  const POST_PER_PAGE = 2;
   try {
     const query = {
-      take: POST_PER_PAGE,
-      skip: POST_PER_PAGE * (page - 1),
       where: { userEmail: session.user.email },
     };
 
