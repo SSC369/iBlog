@@ -5,12 +5,6 @@ import { NextResponse } from "next/server";
 export const GET = async (req) => {
   const session = await getAuthSession(); //only works if component is a client component
 
-  if (!session) {
-    return new NextResponse(
-      JSON.stringify({ message: "Not Authenticated!" }, { status: 401 })
-    );
-  }
-
   const { searchParams } = new URL(req.url);
   const page = searchParams.get("page");
   const POST_PER_PAGE = 2;

@@ -52,14 +52,7 @@ const SinglePage = async ({ params }) => {
         </div>
         {post?.img && (
           <div className={styles.imageContainer}>
-            <Image
-              src={post.img}
-              alt="post image"
-              fill
-              priority="true"
-              sizes="(max-height: 300px) 300px"
-              style={{ objectFit: "contain" }}
-            />
+            <img src={post?.img} className={styles.postImage} />
           </div>
         )}
       </div>

@@ -12,16 +12,20 @@
 }
 
 .textContainer {
+  flex: 1;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  flex: 1;
 }
+
 .imageContainer {
   flex: 1;
-
+  height: 400px;
   max-width: 500px;
-  position: relative;
+}
+.postImage {
+  width: 100%;
+  object-fit: contain;
 }
 
 .description {
@@ -38,7 +42,7 @@
 
 .user {
   border: 2px solid crimson;
-  align-self: flex-end;
+  align-self: flex-start;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -100,9 +104,6 @@
   }
 }
 @media screen and (max-width: 1024px) {
-  .imageContainer {
-    display: none;
-  }
   .textContainer {
     gap: 20px;
     flex: 1;
@@ -111,8 +112,6 @@
   .title {
     margin-bottom: 0;
   }
-}
-@media screen and (min-width: 1024px) {
 }
 
 @media screen and (max-width: 640px) {
