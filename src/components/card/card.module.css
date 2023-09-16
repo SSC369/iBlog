@@ -1,0 +1,76 @@
+.container {
+  margin-bottom: 50px;
+  display: flex;
+  gap: 50px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  padding: 20px;
+  z-index: 999;
+}
+
+.imageContainer {
+  flex: 2;
+  height: 240px;
+  position: relative;
+}
+
+.image {
+  object-fit: contain;
+}
+.icon {
+  color: var(--textColor);
+}
+
+.textContainer {
+  border: 2px solid lightcoral;
+
+  border-radius: 8px;
+  padding: 10px;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.date {
+  color: gray;
+  font-size: 12px;
+  color: crimson;
+}
+
+.category {
+  color: crimson;
+  font-weight: 500;
+}
+
+.desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--softTextColor);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.link {
+  border-bottom: 1px solid crimson;
+  width: max-content;
+  padding: 2px 0px;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+  .imageContainer {
+    display: none;
+  }
+}
+
+.details {
+}

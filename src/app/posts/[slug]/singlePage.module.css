@@ -1,0 +1,126 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.infoContainer {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.textContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex: 1;
+}
+.imageContainer {
+  flex: 1;
+
+  max-width: 500px;
+  position: relative;
+}
+
+.description {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  min-height: 200px;
+  overflow: auto;
+}
+
+.title {
+  font-size: 64px;
+}
+
+.user {
+  border: 2px solid crimson;
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.userImageContainer {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 30px;
+  width: 30px;
+}
+
+.userTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--softTextColor);
+}
+
+.username {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--textColor);
+}
+.date {
+  font-size: 14px;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  gap: 50px;
+}
+
+.post {
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 1536px) {
+  .title {
+    font-size: 54px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .title {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .imageContainer {
+    display: none;
+  }
+  .textContainer {
+    gap: 20px;
+    flex: 1;
+  }
+
+  .title {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+}
+
+@media screen and (max-width: 640px) {
+  .title {
+    font-size: 26px;
+  }
+
+  .description p {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,70 @@
+.container {
+  margin: 20px 0px;
+}
+
+.spin {
+  color: var(--textColor);
+}
+
+.title {
+  margin-top: 20px;
+  color: var(--textColor);
+  margin-bottom: 20px;
+  font-size: 24px;
+  letter-spacing: 1px;
+  border-bottom: 2px solid crimson;
+  width: fit-content;
+}
+
+.write {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.input {
+  padding: 20px;
+  width: 100%;
+  border: 2px solid var(--softTextColor);
+  background-color: var(--bgSoft);
+  color: var(--textColor);
+  border-radius: 8px;
+}
+
+.button {
+  padding: 16px 20px;
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comments {
+  margin-top: 20px;
+}
+.link {
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 20px;
+  width: fit-content;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 20px;
+  }
+}
+
+.empty {
+  text-align: center;
+  font-size: 24px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  color: var(--textColor);
+  justify-content: center;
+}
