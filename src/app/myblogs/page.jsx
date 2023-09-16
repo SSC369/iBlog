@@ -24,7 +24,7 @@ const MyBlogs = (props) => {
   };
 
   const { data, mutate, isLoading } = useSWR(
-    `http://localhost:3000/api/myblogs?page=${page}`,
+    `https://i-blog-ssc369.vercel.app/api/myblogs?page=${page}`,
     fetcher
   );
 

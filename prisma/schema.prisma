@@ -81,4 +81,8 @@ model Comment {
   user      User     @relation(fields: [userEmail], references: [email])
   postSlug  String?
   post      Post?     @relation(fields: [postSlug], references: [slug])
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 4de40125465ff462b124a64d332f8292f67b5c30

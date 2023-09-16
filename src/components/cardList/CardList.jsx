@@ -29,7 +29,7 @@ const CardList = ({ page }) => {
   }
 
   const { data, mutate, isLoading } = useSWR(
-    `http://localhost:3000/api/posts?page=${page}`,
+    `https://i-blog-ssc369.vercel.app/api/posts?page=${page}`,
     fetcher
   );
 
