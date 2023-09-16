@@ -16,11 +16,7 @@ export const authOptions = {
       clientSecret: process.env.GITHUB_SECRET,
     }),
   ],
-<<<<<<< HEAD
   secret: process.env.NEXTAUTH_SECRET,
-=======
-  secret: process.env.NEXTAUTH_SECRET
->>>>>>> 4de40125465ff462b124a64d332f8292f67b5c30
 };
 
 export const getAuthSession = () => getServerSession(authOptions);
