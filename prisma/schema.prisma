@@ -79,6 +79,6 @@ model Comment {
   desc      String
   userEmail String
   user      User     @relation(fields: [userEmail], references: [email])
-  postSlug  String
-  post      Post     @relation(fields: [postSlug], references: [slug])
+  postSlug  String?
+  post      Post?     @relation(fields: [postSlug], references: [slug])
 }
