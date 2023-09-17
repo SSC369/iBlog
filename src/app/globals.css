@@ -5,6 +5,7 @@
   --textColor: black;
   --softBg: #f0f0f0;
   --softTextColor: #626262;
+  --shadow: box-shadow: rgba(255, 244, 244, 0.778) 0px 3px 8px;
 }
 
 * {
@@ -30,6 +31,7 @@ a {
   --textColor: #ddd;
   --softBg: #1f273a;
   --softTextColor: #a6a6a6;
+  --shadow: rgba(255, 244, 244, 0.778) 0px 3px 8px;
 }
 
 .light {
@@ -37,6 +39,7 @@ a {
   --textColor: black;
   --softBg: #f0f0f0;
   --softTextColor: #626262;
+  --shadow:rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .container {

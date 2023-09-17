@@ -6,21 +6,13 @@
 
 .infoContainer {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 50px;
   margin-top: 20px;
 }
 
-.textContainer {
-  flex: 1;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-
 .imageContainer {
-  flex: 1;
-  height: 400px;
   max-width: 500px;
 }
 .postImage {
@@ -29,15 +21,17 @@
 }
 
 .description {
-  font-size: 16px;
-  font-weight: 300;
+  text-transform: capitalize;
+  line-height: 26px;
+  font-size: 14px;
+  font-weight: 400;
   margin-bottom: 20px;
-  min-height: 200px;
-  overflow: auto;
 }
 
 .title {
+  text-transform: capitalize;
   font-size: 64px;
+  border-bottom: 2px solid crimson;
 }
 
 .user {
@@ -103,26 +97,20 @@
     font-size: 48px;
   }
 }
-@media screen and (max-width: 1024px) {
-  .textContainer {
-    gap: 20px;
-    flex: 1;
-  }
-  .imageContainer {
-    display: none;
-  }
-
-  .title {
-    margin-bottom: 0;
-  }
-}
 
 @media screen and (max-width: 640px) {
   .title {
     font-size: 26px;
   }
 
-  .description p {
-    font-size: 18px;
+  .description {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .description {
+    font-size: 16px;
+    line-height: 30px;
   }
 }

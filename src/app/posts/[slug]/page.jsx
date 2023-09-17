@@ -5,7 +5,7 @@ import Comments from "@/components/comments/Comments";
 
 const getData = async (slug) => {
   const res = await fetch(
-    `https://i-blog-ssc369.vercel.app/api/posts/${slug}`,
+    `https://i-blog-ssc369.vercel.app//api/posts/${slug}`,
     {
       cache: "no-store",
     }
@@ -24,40 +24,35 @@ const SinglePage = async ({ params }) => {
   return (
     <div className={styles.container}>
       <div className={styles.infoContainer}>
-        <div className={styles.textContainer}>
-          <div>
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <h1 className={styles.title}>{post?.title}</h1>
-              {/*TODO: edit post */}
-            </div>
+        <h1 className={styles.title}>{post?.title}</h1>
+        {/*TODO: edit post */}
 
-            <p className={styles.description}>{post?.desc}</p>
-          </div>
-          <div className={styles.user}>
-            {post?.user?.image && (
-              <div className={styles.userImageContainer}>
-                <Image
-                  src={post.user.image}
-                  alt="user"
-                  fill
-                  sizes="(max-width: 40px) 40px"
-                  className={styles.avatar}
-                />
-              </div>
-            )}
-            <div className={styles.userTextContainer}>
-              <span className={styles.username}>{post?.user.name}</span>
-              <span className={styles.date}>
-                {post?.createdAt.substring(0, 10)}
-              </span>
-            </div>
-          </div>
-        </div>
         {post?.img && (
           <div className={styles.imageContainer}>
             <img src={post?.img} className={styles.postImage} />
           </div>
         )}
+        <p className={styles.description}>{post?.desc}</p>
+
+        <div className={styles.user}>
+          {post?.user?.image && (
+            <div className={styles.userImageContainer}>
+              <Image
+                src={post.user.image}
+                alt="user"
+                fill
+                sizes="(max-width: 40px) 40px"
+                className={styles.avatar}
+              />
+            </div>
+          )}
+          <div className={styles.userTextContainer}>
+            <span className={styles.username}>{post?.user.name}</span>
+            <span className={styles.date}>
+              {post?.createdAt.substring(0, 10)}
+            </span>
+          </div>
+        </div>
       </div>
       <hr />
       <div className={styles.post}>

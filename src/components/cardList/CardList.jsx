@@ -28,8 +28,6 @@ const CardList = ({ page }) => {
     router.push("/login");
   }
 
-  const url = "http://localhost:3000";
-
   const { data, mutate, isLoading } = useSWR(
     `https://i-blog-ssc369.vercel.app/api/posts?page=${page}`,
     fetcher

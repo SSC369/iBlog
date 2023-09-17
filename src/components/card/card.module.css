@@ -3,9 +3,8 @@
   display: flex;
   gap: 50px;
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-  padding: 20px;
+  box-shadow: var(--shadow);
+  padding: 30px 20px;
   z-index: 999;
 }
 
@@ -13,6 +12,12 @@
   flex: 2;
   height: 240px;
   position: relative;
+}
+
+.details {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .image {
@@ -23,10 +28,7 @@
 }
 
 .textContainer {
-  border: 2px solid lightcoral;
-
   border-radius: 8px;
-  padding: 10px;
   flex: 2;
   display: flex;
   flex-direction: column;
@@ -46,11 +48,12 @@
 }
 
 .desc {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
   color: var(--softTextColor);
   display: -webkit-box;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 5;
+  line-height: 26px;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -69,5 +72,11 @@
 @media screen and (max-width: 1024px) {
   .imageContainer {
     display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .desc {
+    font-size: 14px;
   }
 }
